@@ -91,6 +91,8 @@ def log_data(label, data):
     hex_data = binascii.hexlify(data).decode()
     if DEBUG:
         logger.debug(f"{label} HEX: {hex_data}")
+    else:
+        logger.info(f"{label}")
 
     # If you want to log binary data to a separate file for analysis
     if DEBUG and LOG_FILE:
